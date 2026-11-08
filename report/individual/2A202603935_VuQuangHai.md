@@ -17,15 +17,16 @@
 ## 2. Kết quả chính
 
 *Chép bảng so sánh cuối Phần 5 (F1 test, F1 SUB 40, p95 ms/tin, USD/1k tin) của chính bạn.*
-                                 precision  recall  F1 (test)  F1 (SUB 40)  \
-1. BoW + LogReg (tự code)            1.000   0.856      0.922        0.889   
-2. BoW + MLP (deep learning)         0.957   0.918      0.937        0.947   
-3a. Encoder (MiniLM) + kNN           0.861   0.959      0.907        1.000   
-3b. Encoder (MiniLM) + LogReg        0.968   0.938      0.953        0.974   
-3c. Encoder (MiniLM) + MLP head      0.967   0.918      0.942        0.974   
-4a. LLM nhỏ zero-shot                0.947   0.900      0.923        0.923   
-4b. LLM lớn zero-shot                0.000   0.000      0.000        0.000   
-4c. LLM nhỏ few-shot                 1.000   0.900      0.947        0.947   
+|                                | precision | recall | F1 (test) | F1 (SUB 40) |
+| --- | --- | --- | --- | --- |
+1. BoW + LogReg (tự code)        |    1.000 |  0.856  |    0.922  |      0.889   |
+2. BoW + MLP (deep learning)     |    0.957 |  0.918  |    0.937  |      0.947   |
+3a. Encoder (MiniLM) + kNN       |    0.861 |  0.959  |    0.907  |      1.000   |
+3b. Encoder (MiniLM) + LogReg    |    0.968 |  0.938  |    0.953  |      0.974   |
+3c. Encoder (MiniLM) + MLP head  |    0.967 |  0.918  |    0.942  |      0.974   |
+4a. LLM nhỏ zero-shot            |    0.947 |  0.900  |    0.923  |      0.923   |
+4b. LLM lớn zero-shot            |    0.000 |  0.000  |    0.000  |      0.000   |
+4c. LLM nhỏ few-shot             |    1.000 |  0.900  |    0.947  |      0.947   |
 
                                  train (s)  tin/s (cả lô)  p50 ms/tin  \
 1. BoW + LogReg (tự code)            4.898   8.462661e+03       0.057   
