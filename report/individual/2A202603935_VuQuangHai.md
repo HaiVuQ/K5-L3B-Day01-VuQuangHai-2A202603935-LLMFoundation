@@ -16,7 +16,6 @@
 
 ## 2. Kết quả chính
 
-*Chép bảng so sánh cuối Phần 5 (F1 test, F1 SUB 40, p95 ms/tin, USD/1k tin) của chính bạn.*
 |                                | precision | recall | F1 (test) | F1 (SUB 40) |
 | --- | --- | --- | --- | --- |
 |1. BoW + LogReg (tự code)        |    1.000 |  0.856  |    0.922  |      0.889   |
@@ -53,6 +52,8 @@
 ## 3. Dự đoán và thực tế
 
 *Chọn 3 dự đoán `predict(...)` lệch nhiều nhất so với kết quả. Mỗi cái: bạn đoán gì, ra gì, vì sao lệch.*
+
+Dự đoán ở thí nghiệm 4.A lệch nhiều nhất ra F1=0 ở model LLM lớn zero-shot trong khi đoán lớn hơn F1=0.923 ở model LLM nhỏ zero-shot, vì các dòng model lớn hiện đại (như Gemini 3.8 Flash) thường đi kèm cơ chế suy luận ngầm (Reasoning/Thinking) khá nặng, khi ép giới hạn số lượng token đầu ra quá ngắn (max_tokens = 512 hoặc thấp hơn) hoặc thiết lập cấu hình tham số suy luận chưa tối ưu, mô hình có thể bị kẹt hoặc dùng hết sạch token chỉ để "suy nghĩ nội bộ" mà chưa kịp in ra từ nhãn (spam/ham), khiến hàm parse_label đọc nhầm thành lỗi và gán về mặc định.
 
 ## 4. Phân tích 50 case khó
 
